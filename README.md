@@ -1,17 +1,39 @@
-# Task Manager API (Go) — Final
-## Setup
-1. Replace module path
-Open `go.mod` and `import` paths in source files and replace `github.com/
-Thripada/task-manager-api-go` with your GitHub module path (e.g.
-`github.com/Thripada/task-manager-api-go`).
-2. Download dependencies
-```bash
+Task Manager API (Go)
+
+A simple concurrency-safe in-memory Task Manager API built in Go using Gorilla Mux.
+
+Features
+Create, read, update, and delete tasks (CRUD)
+Concurrency-safe in-memory storage using sync.RWMutex
+Input validation and JSON error handling
+Simple RESTful API design
+
+Requirements
+Go 1.25+ installed
+Optional: VS Code REST Client,Invoke-WebRequest or cURL, or Postman for testing
+
+Setup & Run
+
+Clone the repository:
+
+git clone https://github.com/thripada/task-manager-api-go.git
+cd task-manager-api-go
+
+
+Install dependencies:
+
 go mod tidy
 
 
-1. Run locally
+Run the server:
 
 go run main.go
+
+
+You should see:
+
+Server running on port 8080
+
 
 
 API: http://localhost:8080
@@ -32,12 +54,3 @@ map.
 Readers use RLock for concurrency; writers use Lock to ensure exclusive writes.
 
 
-Publishing to GitHub
-Update module path as above
-Initialize git, commit, add remote, and push
-git init
-git add .
-git commit -m "initial"
-git branch -M main
-git remote add origin https://github.com/<YOUR_USERNAME>/task-manager-apigo.git
-git push -u origin main
