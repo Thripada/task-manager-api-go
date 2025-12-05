@@ -1,0 +1,33 @@
+### Create Task
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+
+{
+"title": "Buy milk",
+"description": "2 liters",
+"completed": false
+}
+
+
+### List Tasks
+GET http://localhost:8080/tasks
+
+
+### Get Task (replace {id})
+GET http://localhost:8080/tasks/{id}
+
+
+### Update Task
+PUT http://localhost:8080/tasks/{id}
+Content-Type: application/json
+
+
+{
+"title": "Buy milk and eggs",
+"completed": true
+}
+
+
+### Delete Task
+DELETE http://localhost:8080/tasks/{id}
